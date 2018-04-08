@@ -3,5 +3,10 @@
   become: true
   #gather_facts: False
   roles:
-    - devmachine
     - ec2-launch
+- hosts: ec2hosts
+  user: ubuntu
+  become: true
+  gather_facts: True
+  roles:
+    - devmachine
