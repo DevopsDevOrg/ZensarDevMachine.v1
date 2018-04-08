@@ -1,0 +1,17 @@
+# AWS credentials
+ec2_access_key: AKIAIIKSKIFQPELT65UQ
+ec2_secret_key: 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
+
+# ec2 module variables
+ec2_launch_id: i-00fd35a6108f9457f
+ec2_launch_count: 1
+ec2_launch_count_tag: mycount
+#ec2_launch_exact_count: 1
+ec2_launch_image: ami-0189d76e
+ec2_launch_groups: launch-wizard-1
+ec2_launch_tag_name: mytagname
+ec2_launch_tag_class: mytagclass
+ec2_launch_instance_type: t2.micro
+ec2_launch_key_name: aws
+ec2_launch_region: ap-south-1
+ec2_launch_state: present

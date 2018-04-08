@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  become: true
+  #gather_facts: False
+  roles:
+    - devmachine
+    - ec2-launch

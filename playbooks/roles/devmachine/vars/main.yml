@@ -1,0 +1,7 @@
+---
+pack_git: git
+pack_java: openjdk-8-jdk
+pack_maven: maven
+pack_apache: apache2
+pack_tomcat: tomcat8
+pack_eclipse: eclipse

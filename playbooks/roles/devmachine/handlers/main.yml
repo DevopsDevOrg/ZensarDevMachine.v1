@@ -1,0 +1,4 @@
+- name: start tomcat
+  service: name=tomcat8 state=restarted
+- name: start apache
+  service: name=apache2 state=restarted

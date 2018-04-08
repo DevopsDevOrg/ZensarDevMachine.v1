@@ -1,0 +1,23 @@
+- name: java version
+  shell: java -version 2>&1 | awk '/version/' 
+  register: javaCat 
+  
+- name: verify java 
+  debug:  
+     msg: "{{ javaCat.stdout }}"
+ 
+- name: git version 
+  shell: git --version 
+  register: gitCat 
+  
+- name: verify git  
+  debug:  
+     msg: "{{ gitCat.stdout }}"
+
+- name: Maven version 
+  shell: mvn --version 
+  register: mvnCat 
+  
+- name: verify git  
+  debug:  
+    msg: "{{ mvnCat.stdout }}"  
