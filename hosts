@@ -1,1 +1,15 @@
-localhost #ansible_connection=local
+[local]
+localhost ansible_connection=local
+[launched]
+13.232.58.127 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.127.17.123 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.232.22.59 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.232.10.15 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.127.211.35 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.127.16.84 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.127.252.11 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.232.6.39 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.126.140.98 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.232.16.153 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+13.127.189.201 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/zaws.pem ansible_python_interpreter=/usr/bin/python3
+

@@ -1,12 +1,33 @@
 ---
-- hosts: localhost
-  become: true
-  #gather_facts: False
+- hosts: local
+  connection: local
+  gather_facts: False
+  tags: provisioning
+  become_method: true
   roles:
     - ec2-launch
-- hosts: ec2hosts
-  user: ubuntu
-  become: true
+
+
+- hosts: launched[-1]
+  sudo: yes
+  remote_user: ubuntu
   gather_facts: True
+  tags: installation
+  vars:
+      ugroup: dev
+      upass: abc123
+  pre_tasks:
+
+     - name: update package
+       shell: apt update -y
+
+     - name: Setup User on new ec2 instance
+       user: 
+          name: "{{ec2_launch_tag_name}}"
+          groups: "{{ugroup}}"
+          password: "{{upass}}"    
+                   
+          
   roles:
-    - devmachine
+   - devmachine
+
