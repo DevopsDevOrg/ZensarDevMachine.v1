@@ -8,6 +8,6 @@ pack_apache: apache2
 pack_tomcat: tomcat8
 pack_eclipse: eclipse
 email_uname: mahadeva.garad1@gmail.com
-email_pwd: Ajit@333 
-email_uname_to: mahadev.garad@zensar.com
+email_pwd: 
+email_uname_to: 
 
