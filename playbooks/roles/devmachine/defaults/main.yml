@@ -1,0 +1,13 @@
+#ugroup: dev
+upass: abc123
+ec2_launch_tag_name: mytag
+pack_git: git
+pack_java: openjdk-8-jdk
+pack_maven: maven
+pack_apache: apache2
+pack_tomcat: tomcat8
+pack_eclipse: eclipse
+email_uname: mahadeva.garad1@gmail.com
+email_pwd: Ajit@333 
+email_uname_to: mahadev.garad@zensar.com
+

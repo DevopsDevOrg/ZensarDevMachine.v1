@@ -1,2 +1,3 @@
+- include: user.yml
 - include: pack_install.yml
 - include: VerifyVersion.yml

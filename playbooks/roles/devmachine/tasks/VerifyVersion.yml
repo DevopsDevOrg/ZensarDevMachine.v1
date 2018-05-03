@@ -1,3 +1,5 @@
+
+
 - name: java version
   shell: java -version 2>&1 | awk '/version/' 
   register: javaCat 
@@ -18,6 +20,17 @@
   shell: mvn --version 
   register: mvnCat 
   
-- name: verify git  
+- name: verify maven  
   debug:  
     msg: "{{ mvnCat.stdout }}"  
+
+- mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "{{ email_uname }}"
+    password: "{{ email_pwd }}"
+    to: "{{ email_uname_to }}"
+    subject: Ansible-report
+    body: 'System {{ ansible_hostname }} has been successfully provisioned.'
+  delegate_to: localhost
+

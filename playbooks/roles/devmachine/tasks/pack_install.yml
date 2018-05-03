@@ -1,28 +1,14 @@
-- name: update package
-  shell: apt update
+#- name: update package
+#  shell: apt update
 
-- name: Install Open JDK 8 
-  apt: name={{pack_java}} state=latest 
-
-  
-- name: Install git
-  apt: name={{pack_git}} state=latest
-  
-- name: Install apache
-  apt: name={{pack_apache}} state=present
-  notify:
-    - start apache
- 
- 
-- name: install maven 
-  apt: name={{pack_maven}} state=latest
-   
-
- 
-- name: Install Tomcat8
-  apt: name={{pack_tomcat}} state=present
-  notify:
-    - start tomcat
-
-- name: Install eclipse
-  apt: name={{pack_eclipse}} state=present
+- name: Installing Software on new instance  
+  package:
+       name:  "{{ item }}"
+       state: latest
+  with_items:
+     - "{{ pack_java }}"
+     - "{{ pack_git }}"
+     - "{{ pack_apache }}"
+     - "{{ pack_maven }}"
+     - "{{ pack_tomcat }}"
+     - "{{ pack_eclipse }}" 

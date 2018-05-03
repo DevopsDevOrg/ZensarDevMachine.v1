@@ -9,7 +9,7 @@
          image: "{{ ec2_launch_image }}"
          group: "{{ ec2_launch_groups | default(omit) }}"
          instance_tags:
-                   name: "{{ ec2_launch_tag_name | default(omit) }}"
+                   Name: "{{ ec2_launch_tag_name | default(omit) }}"
                    class: "{{ ec2_launch_tag_class | default(omit) }}"
          instance_type: "{{ ec2_launch_instance_type }}"
          key_name: "{{ ec2_launch_key_name | default(omit) }}"
@@ -18,9 +18,9 @@
          state: "{{ ec2_launch_state | default(omit) }}"
        register: ec2_launch
 
-     - name: The following instances have been launched
-       debug:
-          var: ec2_launch
+#     - name: The following instances have been launched
+#       debug:
+#          var: ec2_launch
 
 #     - name: Add newly created instances to the hosts with add_host
 #       add_host:

@@ -1,4 +1,4 @@
 - name: start tomcat
-  service: name=tomcat8 state=restarted
+  service: name={{pack_tomcat}} state=restarted
 - name: start apache
   service: name=apache2 state=restarted

@@ -1,0 +1,14 @@
+- name: update package
+  shell: apt update -y
+
+- name: Setup User on new ec2 instance
+  user:
+    name: "{{ec2_launch_tag_name}}"
+    groups: sudo
+    password: "{{upass}}"
+    state: present
+  register: user_details
+
+- name: User with below details are created
+  debug:
+      var: user_details
